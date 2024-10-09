@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.scss';
-import './index.scss';
 
-import {
+import{
   BrowserRouter as Router,
+  Route,
   Routes,
-  Route
 } from "react-router-dom";
 
 import Menu from './Menu/Menu';
@@ -14,25 +13,22 @@ import HomePage from './HomePage/HomePage';
 import Footer from './Footer/Footer';
 import AboutPage from './AboutPage/AboutPage';
 import LoginPage from './LoginPage/LoginPage';
-import BudgetChart from './BudgetChart/BudgetChart';
-
-
 function App() {
   return (
     <Router>
-      <Menu />
+      <Menu/>
       <Hero/>
       <div className="mainContainer">
         <Routes>
-        <Route path="/about" element={<AboutPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/budget" element={<BudgetChart />} />
-
+          <Route path="/about" element={<AboutPage/>}>
+          </Route>
+          <Route path="/login" element={<LoginPage/>}>
+          </Route>
+          <Route path="/" element={<HomePage/>}>
+          </Route>
         </Routes>
       </div>
-      <Footer />
-     
+      <Footer/>
     </Router>
   );
 }

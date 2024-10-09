@@ -357,18 +357,10 @@ template {
 
 
 
-/* General box-sizing rule */
 * {
   box-sizing: border-box;
 }
 
-/* Body styling */
-body {
-  font-size: 10px;
-  font-family: Tahoma, Arial;
-}
-
-/* Navigation styling */
 nav {
   width: 100%;
   background-color: #4d5791;
@@ -379,7 +371,7 @@ nav {
 nav ul,
 nav ul li {
   margin: 0;
-  padding: 0;
+  padding: 0 ;
   list-style: none;
   display: inline-block;
 }
@@ -390,80 +382,98 @@ nav ul li a {
   line-height: 44px;
   font-size: 1.4em;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
+  margin: 0;
 }
 
-nav ul li a:hover {
+nav ul li a:hover  {
+  background-color: white;
+  color: #554d91;
+}
+
+
+body {
+  font-size: 10px;
+  font-family: Tahoma, Arial;
+}
+
+div.menu {
+  width: 100%;
+  background-color: #4d5791;
+  height: 44px;
+  padding: 0 40px;
+}
+
+div.menu ul,
+div.menu ul li {
+  margin: 0;
+  padding: 0 ;
+  list-style: none;
+  display: inline-block;
+}
+
+div.menu ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 44px;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: #fff;
+  margin: 0;
+}
+
+div.menu ul li a:hover  {
   background-color: white;
   color: #4d5791;
 }
 
-/* Header styling */
-header.hero {
+div.hero {
   height: 350px;
   background-color: #b4c6f0;
-  background-image: url('/bg.png');// Keep this as is
+  background-image: url('~/public/bg.png');
   background-size: 400px;
   background-repeat: no-repeat;
   background-position: center bottom;
   padding-top: 40px;
 }
 
-
-header.hero h1,
-header.hero h2 {
+div.hero h1,
+div.hero h2 {
   text-align: center;
   margin: 0;
 }
 
-header.hero h1 {
+div.hero h1 {
   color: #fff;
   font-size: 4.2em;
   margin-bottom: 20px;
 }
 
-header.hero h2 {
+div.hero h2 {
   color: #4d5791;
 }
 
-/* Main content styling */
-main {
+.container {
   padding: 40px;
   width: 100%;
 }
 
-/* Page area styling */
 .page-area {
   max-width: 768px;
   display: inline-block;
 }
 
-/* Footer styling */
-footer {
+.bottom {
   height: 50px;
   background-color: #b4c6f0;
   padding: 40px;
 }
 
-/* Skip link styling */
-.skip {
-  display: block;
-  line-height: 44px;
-  padding: 0 20px;
-  margin-top: -44px;
-}
-
-.skip:focus {
-  margin-top: 0;
-}
-
-/* Center text alignment */
 .center {
   text-align: center;
 }
 
-/* Article styling in main content */
-main article {
+.container div.text-box {
   display: inline-block;
   width: 100%;
   max-width: 340px;
@@ -472,49 +482,7 @@ main article {
 }
 
 @media screen and (min-width: 768px) {
-  main article {
+  .container .div.text-box {
       margin: 10px;
   }
 }
-
-/* D3 Chart styling */
-#d3-chart {
-  margin: 20px auto;
-  width: 100%; /* Adjusted for responsiveness */
-  max-width: 500px; /* Ensure it doesn't exceed the desired width */
-  height: 300px;
-}
-
-/* D3 Bar chart styles */
-.bar {
-  fill: #36a2eb;
-}
-
-/* D3 Axis styles */
-.x-axis path,
-.x-axis line {
-  fill: none;
-  shape-rendering: crispEdges;
-}
-
-.y-axis path,
-.y-axis line {
-  fill: none;
-  shape-rendering: crispEdges;
-}
-
-/* Chart styling for Canvas (Chart.js) */
-#myChart {
-  margin: 0 auto;
-}
-
-/* Add styling for the bar chart labels */
-#d3-chart .label {
-  font-size: 12px;
-  fill: #000; /* Color of the text */
-}
-
-
-
-
-
