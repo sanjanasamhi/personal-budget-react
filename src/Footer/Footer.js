@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="bottom">
         <div className="center">
-            All rights reserved &copy; Poojitha Jayareddygari
+            All rights reserved &copy; Sanjana
         </div>        
     </footer>
   );
